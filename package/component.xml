@@ -152,8 +152,8 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>M_MEMORY_WB</spirit:name>
-      <spirit:displayName>M_MEMORY_WB</spirit:displayName>
+      <spirit:name>M_WB</spirit:name>
+      <spirit:displayName>M_WB</spirit:displayName>
       <spirit:busType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -838,17 +838,37 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>WebAssembly Interconnect IP</xilinx:displayName>
-      <xilinx:coreRevision>23</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-02-26T17:35:34Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>24</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-07-24T07:41:05Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69737bee_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c7a6b26_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f1411_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@696ac2fc_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59dd1a5d_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@688a3c84_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534f60bd_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6fa978_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c1d12a2_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37f88d3c_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65ac776a_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@519f5b4b_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3383b8_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5748d648_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ae0931_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452e651f_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29d1e869_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f28e6a1_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6134065e_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@91ea4bf_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bb4994f3"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dbad8067"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="444336b5"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a230fa6a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="89681c72"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a780bfaa"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
