@@ -6,8 +6,15 @@ library work;
   use work.WasmFpgaInterconnectPackage.all;
 
 entity WasmFpgaInterconnect is
-    port ( 
-        Loaded : in std_logic;
+    port (
+        Flash_Adr : in std_logic_vector(23 downto 0);
+        Flash_Sel : in std_logic_vector(3 downto 0);
+        Flash_DatIn : in std_logic_vector(31 downto 0);
+        Flash_We : in std_logic;
+        Flash_Stb : in std_logic;
+        Flash_Cyc : in std_logic_vector(0 downto 0);
+        Flash_DatOut : out std_logic_vector(31 downto 0);
+        Flash_Ack : out std_logic;
         Loader_Adr : in std_logic_vector(23 downto 0);
         Loader_Sel : in std_logic_vector(3 downto 0);
         Loader_DatIn : in std_logic_vector(31 downto 0);
@@ -16,14 +23,14 @@ entity WasmFpgaInterconnect is
         Loader_Cyc : in std_logic_vector(0 downto 0);
         Loader_DatOut : out std_logic_vector(31 downto 0);
         Loader_Ack : out std_logic;
-        Adr : in std_logic_vector(23 downto 0);
-        Sel : in std_logic_vector(3 downto 0);
-        DatIn : in std_logic_vector(31 downto 0); 
-        We : in std_logic;
-        Stb : in std_logic;
-        Cyc : in std_logic_vector(0 downto 0);
-        DatOut : out std_logic_vector(31 downto 0);
-        Ack : out std_logic;
+        Bus_Adr : in std_logic_vector(23 downto 0);
+        Bus_Sel : in std_logic_vector(3 downto 0);
+        Bus_DatIn : in std_logic_vector(31 downto 0);
+        Bus_We : in std_logic;
+        Bus_Stb : in std_logic;
+        Bus_Cyc : in std_logic_vector(0 downto 0);
+        Bus_DatOut : out std_logic_vector(31 downto 0);
+        Bus_Ack : out std_logic;
         Memory_Adr : out std_logic_vector(23 downto 0);
         Memory_Sel : out std_logic_vector(3 downto 0);
         Memory_DatIn: in std_logic_vector(31 downto 0);
@@ -33,23 +40,49 @@ entity WasmFpgaInterconnect is
         Memory_DatOut : out std_logic_vector(31 downto 0);
         Memory_Ack : in std_logic
     );
-end entity WasmFpgaInterconnect;
+end entity;
 
 architecture WasmFpgaInterconnectArchitecture of WasmFpgaInterconnect is
 
 begin
 
-  Memory_Adr <= Loader_Adr when Loaded = '0' else Adr;
-  Memory_Sel <= Loader_Sel when Loaded = '0' else Sel;
-  Memory_DatOut <= Loader_DatIn when Loaded = '0' else DatIn;
-  Memory_We <= Loader_We when Loaded = '0' else We;
-  Memory_Stb <= Loader_Stb when Loaded = '0' else Stb;
-  Memory_Cyc <= Loader_Cyc when Loaded = '0' else Cyc;
+  Memory_Adr <= Flash_Adr when Flash_Cyc = "1" else
+                Loader_Adr when Loader_Cyc = "1" else
+                Bus_Adr when Bus_Cyc = "1" else
+                (others => '0');
 
-  Loader_DatOut <= Memory_DatIn when Loaded = '0' else (others => '0');
-  Loader_Ack <= Memory_Ack when Loaded = '0' else '0';
+  Memory_Sel <= Flash_Sel when Flash_Cyc = "1" else
+                Loader_Sel when Loader_Cyc = "1" else
+                Bus_Sel when Bus_Cyc = "1" else
+                (others => '0');
 
-  DatOut <= Memory_DatIn when Loaded = '1' else (others => '0');
-  Ack <= Memory_Ack when Loaded = '1' else '0';
+  Memory_DatOut <= Flash_DatIn when Flash_Cyc = "1" else
+                   Loader_DatIn when Loader_Cyc = "1" else
+                   Bus_DatIn when Bus_Cyc = "1" else
+                   (others => '0');
+
+  Memory_We <= Flash_We when Flash_Cyc = "1" else
+               Loader_We when Loader_Cyc = "1" else
+               Bus_We when Bus_Cyc = "1" else
+               '0';
+
+  Memory_Stb <= Flash_Stb when Flash_Cyc = "1" else
+                Loader_Stb when Loader_Cyc = "1" else
+                Bus_Stb when Bus_Cyc = "1" else
+                '0';
+
+  Memory_Cyc <= Flash_Cyc when Flash_Cyc = "1" else
+                Loader_Cyc when Loader_Cyc = "1" else
+                Bus_Cyc when Bus_Cyc = "1" else
+                (others => '0');
+
+  Flash_DatOut <= Memory_DatIn when Flash_Cyc = "1" else (others => '0');
+  Flash_Ack <= Memory_Ack when Flash_Cyc = "1" else '0';
+
+  Loader_DatOut <= Memory_DatIn when Loader_Cyc = "1" else (others => '0');
+  Loader_Ack <= Memory_Ack when Loader_Cyc = "1" else '0';
+
+  Bus_DatOut <= Memory_DatIn when Bus_Cyc = "1" else (others => '0');
+  Bus_Ack <= Memory_Ack when Bus_Cyc = "1" else '0';
 
 end;

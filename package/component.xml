@@ -79,79 +79,6 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>S_WB</spirit:name>
-      <spirit:displayName>S_WB</spirit:displayName>
-      <spirit:busType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>dat_w</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>DatIn</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>stb</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Stb</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>dat_r</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>DatOut</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>ack</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Ack</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>sel</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Sel</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>cyc</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Cyc</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>adr</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Adr</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>we</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>We</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>M_WB</spirit:name>
       <spirit:displayName>M_WB</spirit:displayName>
       <spirit:busType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone" spirit:version="1.0"/>
@@ -224,6 +151,152 @@
         </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_FLASH_WB</spirit:name>
+      <spirit:displayName>S_FLASH_WB</spirit:displayName>
+      <spirit:busType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>dat_w</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_DatIn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>stb</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_Stb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>dat_r</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_DatOut</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ack</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_Ack</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sel</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_Sel</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>cyc</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_Cyc</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>adr</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_Adr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>we</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Flash_We</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S_BUS_WB</spirit:name>
+      <spirit:displayName>S_BUS_WB</spirit:displayName>
+      <spirit:busType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="opencores.org" spirit:library="user" spirit:name="wishbone_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>dat_w</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_DatIn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>stb</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_Stb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>dat_r</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_DatOut</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ack</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_Ack</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sel</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_Sel</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>cyc</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_Cyc</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>adr</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_Adr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>we</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>Bus_We</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:model>
     <spirit:views>
@@ -287,7 +360,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d0a5e7b8</spirit:value>
+            <spirit:value>d9cce3ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -308,16 +381,127 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>d0a5e7b8</spirit:value>
+            <spirit:value>d9cce3ce</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
     </spirit:views>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>Loaded</spirit:name>
+        <spirit:name>Flash_Adr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_Sel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_DatIn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_We</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_Stb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_Cyc</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_DatOut</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>Flash_Ack</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -452,7 +636,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Adr</spirit:name>
+        <spirit:name>Bus_Adr</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -469,7 +653,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Sel</spirit:name>
+        <spirit:name>Bus_Sel</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -486,7 +670,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>DatIn</spirit:name>
+        <spirit:name>Bus_DatIn</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -503,7 +687,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>We</spirit:name>
+        <spirit:name>Bus_We</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -516,7 +700,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Stb</spirit:name>
+        <spirit:name>Bus_Stb</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -529,7 +713,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Cyc</spirit:name>
+        <spirit:name>Bus_Cyc</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -546,7 +730,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>DatOut</spirit:name>
+        <spirit:name>Bus_DatOut</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -563,7 +747,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>Ack</spirit:name>
+        <spirit:name>Bus_Ack</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -766,7 +950,7 @@
       <spirit:file>
         <spirit:name>../src/WasmFpgaInterconnect.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_fcbc4ac3</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_aecc4e68</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -838,8 +1022,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>WebAssembly Interconnect IP</xilinx:displayName>
-      <xilinx:coreRevision>24</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-07-24T07:41:05Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>25</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-02-01T19:21:22Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@69737bee_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2c7a6b26_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
@@ -861,13 +1045,35 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@f28e6a1_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6134065e_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@91ea4bf_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ba46853_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2b53a0_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c68e0b_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54bb6305_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee9da36_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b28d09_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84465c1_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce37470_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c1171eb_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f3605b_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@759db96a_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10071c8c_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6264cf9c_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40a7075a_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29511cdc_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f4df0a5_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a5a905d_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63756c89_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d33fe7a_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4887c736_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37f0ddc5_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@321bf264_ARCHIVE_LOCATION">/home/ubuntu-dev/git/webassembly/wasm-fpga-interconnect/package</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dbad8067"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="444336b5"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="a230fa6a"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="8aee6e73"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a9c8c529"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="deb324d3"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="a780bfaa"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

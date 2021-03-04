@@ -43,7 +43,7 @@ printMessage "Set IP repository paths"
 
 set obj [get_filesets sources_1]
 
-set_property "ip_repo_paths" "[file normalize "${project_origin}/vivado-bus-abstraction-wb-ip"]" $obj
+set_property "ip_repo_paths" "[file normalize "${project_origin}/vivado-bus-abstraction-wb"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
