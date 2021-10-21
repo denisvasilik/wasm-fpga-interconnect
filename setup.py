@@ -30,23 +30,37 @@ setuptools.setup(
     dependency_links=[],
     package_dir={},
     package_data={},
-    data_files=[
-        ("wasm-fpga-interconnect/package", ["package/component.xml"]),
-        ("wasm-fpga-interconnect/package/bd", ["package/bd/bd.tcl"]),
-        ("wasm-fpga-interconnect/package/xgui", ["package/xgui/wasm_fpga_interconnect_v1_0.tcl"]),
-        ("wasm-fpga-interconnect/src", ["src/WasmFpgaInterconnect.vhd"]),
-        (
-            "wasm-fpga-interconnect/tb",
-            [
-                "tb/tb_FileIo.vhd",
-                "tb/tb_pkg_helper.vhd",
-                "tb/tb_pkg.vhd",
-                "tb/tb_std_logic_1164_additions.vhd",
-                "tb/tb_Types.vhd",
-                "tb/tb_WasmFpgaInterconnect.vhd",
-            ],
-        ),
-        ("wasm-fpga-interconnect", ["CHANGELOG.md", "AUTHORS", "LICENSE"]),
+    data_files=[(
+        "wasm-fpga-interconnect/package", [
+            "package/component.xml"
+        ]),(
+        "wasm-fpga-interconnect/package/bd", [
+            "package/bd/bd.tcl"
+        ]),(
+        "wasm-fpga-interconnect/package/xgui", [
+            "package/xgui/wasm_fpga_interconnect_v1_0.tcl"
+        ]),(
+        "wasm-fpga-interconnect/src", [
+            "src/WasmFpgaInterconnect.vhd",
+            "src/WasmFpgaInterconnectPackage.vhd"
+        ]),(
+        "wasm-fpga-interconnect/tb", [
+            "tb/tb_FileIo.vhd",
+            "tb/tb_pkg_helper.vhd",
+            "tb/tb_pkg.vhd",
+            "tb/tb_std_logic_1164_additions.vhd",
+            "tb/tb_Types.vhd",
+            "tb/tb_WasmFpgaInterconnect.vhd",
+        ]),(
+        'wasm-fpga-interconnect/simstm', [
+            'simstm/Defines.stm',
+            'simstm/WasmFpgaInterconnect.stm',
+        ]),(
+        "wasm-fpga-interconnect", [
+            "CHANGELOG.md",
+            "AUTHORS",
+            "LICENSE"
+        ])
     ],
     setup_requires=[],
     install_requires=[],

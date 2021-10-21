@@ -14,6 +14,7 @@ package:
 clean:
 	@rm -rf .Xil vivado*.log vivado*.str vivado*.jou
 	@rm -rf work \
+		dist \
 		src-gen \
 		dist \
 		*.egg-info
